@@ -33,7 +33,7 @@ for (var shortOption in optionMap)
 	var longOption = optionMap[shortOption];
 	args[longOption] = args[shortOption];
 }
-server.startServer(args);
+server.start(args);
 
 /**
  * Show online help.
