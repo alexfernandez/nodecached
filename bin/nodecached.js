@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * Binary to run a caching server.
+ * Binary to run a nodecached server.
  * (C) 2013 Alex Fernández.
  */
 
@@ -40,8 +40,8 @@ server.start(args);
  */
 function help()
 {
-	console.log('Usage: caching [options]');
-	console.log('  starts a caching server.');
+	console.log('Usage: nodecached [options]');
+	console.log('  starts a nodecached server.');
 	console.log('Options:');
 	console.log('    --p [port]      Port to run the server, default 11211');
 	console.log('    --v             Show notice messages');

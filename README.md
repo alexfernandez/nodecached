@@ -1,4 +1,4 @@
-# caching
+# nodecached
 
 Memcached server written in node.js
 
@@ -6,17 +6,17 @@ Memcached server written in node.js
 
 Installing the package is very simple. Just install globally using npm:
 
-    # npm install -g caching
+    # npm install -g nodecached
 
 On Ubuntu or Mac OS X systems, use `sudo`:
 
-    $ sudo npm install -g caching
+    $ sudo npm install -g nodecached
 
 ## Usage
 
 Start from the command line:
 
-    $ caching
+    $ nodecached
 
 ### Options
 

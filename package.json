@@ -1,14 +1,14 @@
 {
-	"name": "caching",
+	"name": "nodecached",
 	"version": "0.0.1",
 	"description": "Memcached server written in node.js, just because.",
-	"homepage": "https://github.com/alexfernandez/caching",
+	"homepage": "https://github.com/alexfernandez/nodecached",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
 	"license": "MIT",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alexfernandez/caching"
+		"url": "https://github.com/alexfernandez/nodecached"
 	},
 	"dependencies": {
 		"prototypes": "*",
@@ -22,7 +22,7 @@
 		"node": "*"
 	},
 	"bin": {
-		"caching": "bin/caching.js"
+		"nodecached": "bin/nodecached.js"
 	},
 	"scripts": {
 		"test": "node test.js"
