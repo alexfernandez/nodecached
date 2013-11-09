@@ -1,6 +1,6 @@
 {
 	"name": "nodecached",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Memcached server written in node.js, just because.",
 	"homepage": "https://github.com/alexfernandez/nodecached",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
