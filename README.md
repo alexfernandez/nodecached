@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/alexfernandez/nodecached.png)](http://travis-ci.org/alexfernandez/nodecached)
+
 # nodecached
 
 Memcached server written in node.js
