@@ -2,7 +2,7 @@
 
 # nodecached
 
-Memcached server written in node.js
+Memcached server and client written in node.js
 
 ## Installation
 
