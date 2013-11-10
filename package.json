@@ -22,7 +22,8 @@
 		"node": "*"
 	},
 	"bin": {
-		"nodecached": "bin/nodecached.js"
+		"nodecached": "bin/nodecached.js",
+		"nodecached-loadtest": "bin/loadtest.js"
 	},
 	"scripts": {
 		"test": "node test.js"
