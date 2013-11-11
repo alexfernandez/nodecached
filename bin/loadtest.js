@@ -15,7 +15,8 @@ var optionMap = {
 	c: 'concurrency',
 	n: 'maxRequests',
 	t: 'maxSeconds',
-	v: 'debug',
+	v: 'info',
+	vv: 'debug',
 	key: 'key',
 };
 
@@ -60,6 +61,8 @@ function help()
 	console.log('    -c [concurrency]  Number of simultaneous requests');
 	console.log('    -t [seconds]      Max number of seconds');
 	console.log('    --key [key]       The key to use for tests');
+	console.log('    -v                Show info messages');
+	console.log('    -vv               Show debug messages');
 	process.exit(1);
 }
 
