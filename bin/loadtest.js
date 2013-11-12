@@ -17,7 +17,6 @@ var optionMap = {
 	t: 'maxSeconds',
 	v: 'info',
 	vv: 'debug',
-	key: 'key',
 };
 
 // init
