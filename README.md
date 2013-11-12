@@ -22,6 +22,8 @@ Start from the command line:
 
 ### Options
 
+Options are designed to be compatible with memcached, whenever possible.
+
 ## License
 
 Distributed under the MIT license. See the file LICENSE for details.
