@@ -15,6 +15,7 @@
 		"async": "*",
 		"testing": "*",
 		"optimist": "~0.6.0",
+		"memcached": "*",
 		"log": "*"
 	},
 	"keywords" : ["memcached", "npm", "server", "memcache", "cache", "caching", "in-memory", "database"],
