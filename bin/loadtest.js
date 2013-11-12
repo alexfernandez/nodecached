@@ -17,6 +17,7 @@ var optionMap = {
 	t: 'maxSeconds',
 	v: 'info',
 	vv: 'debug',
+	noreply: 'noResponse',
 };
 
 // init
@@ -60,6 +61,8 @@ function help()
 	console.log('    -c [concurrency]  Number of simultaneous requests');
 	console.log('    -t [seconds]      Max number of seconds');
 	console.log('    --key [key]       The key to use for tests');
+	console.log('    --memcached       Use the node-memcached client');
+	console.log('    --noreply         Ignore any server reply');
 	console.log('    -v                Show info messages');
 	console.log('    -vv               Show debug messages');
 	process.exit(1);
