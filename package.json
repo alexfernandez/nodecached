@@ -1,7 +1,7 @@
 {
 	"name": "nodecached",
-	"version": "0.0.2",
-	"description": "Memcached server written in node.js, just because.",
+	"version": "0.0.3",
+	"description": "Memcached server written in node.js. Also contains a client compatible with node-memcached, and can be used as an in-memory cache too.",
 	"homepage": "https://github.com/alexfernandez/nodecached",
 	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
 	"license": "MIT",
