@@ -26,7 +26,7 @@ Start from the command line:
 
 ### Options
 
-Options are designed to be compatible with memcached, whenever possible.
+Options are designed to be compatible with the original memcached, whenever possible.
 
 * `-p port`: Start server on the given port.
 * `-v`: Show notice messages.
@@ -49,10 +49,50 @@ It has been designed to be a drop-in replacement for
 ### Usage
 
 You can integrate nodecached into your code as a client.
+It is mostly compatible with node-memcached, so it should be a drop-in replacement.
+Just create a client with a location and options, and use it:
+
+    var Client = require('nodecached').Client;
+    var client = new Client('localhost:11311', {
+		timeout: 3000,
+	});
+
+### API
+
+The API has the following functions.
+
+#### Client(location, options, callback)
+
+Create the client.
+* location: a string with the location `host:port`.
+Can also be an array of locations, or an object with {location: weight}.
+Note: weights are ignored right now.
+
+#### client.get(key, callback)
+
+Retrieve an object from the server by key, and send to the callback.
+* key: a string with the memcached key.
+* callback: function(error, value) to call with the retrieved value.
+
+#### client.set(key, value, lifetime, callback)
+
+Store an object in the server by key.
+* key: a string with the memcached key.
+* value: the object to store.
+* lifetime: max seconds to store.
+* callback: function(error, result) to call, true if stored.
+
+#### client.delete(key, callback)
+
+Delete an object from the server by key.
+* key: a string with the memcached key.
+* callback: function(error, result) to call, true if deleted, false otherwise.
 
 ### Options
 
 The client accepts some options compatible with node-memcached.
+
+* `timeout`: ms to wait for a response from the server.
 
 ## In-memory Cache
 
