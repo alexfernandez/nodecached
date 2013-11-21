@@ -2,7 +2,15 @@
 
 # nodecached
 
-nodecached is a memcached-compatible server and client written in node.js
+nodecached is a memcached-compatible server and client written in node.js.
+
+The client is a full-blown driver for any remote memcached servers.
+
+The server is useful if you want a simple memcached server that integrates with your existing node.js infrastructure;
+otherwise just use [the original memcached](http://memcached.org/) which is a very lightweight
+program and blazing fast.
+
+nodecached can also be used as an in-memory cache.
 
 ## Installation
 
@@ -39,6 +47,11 @@ These options are specific for nodecached.
 
 * `--error`: Return an error on all queries. Useful for measuring socket performance, without parsing commands.
 * `--delay`: Enable Nagle's algorithm. Useful for measuring the cost of not setting the option `nodelay`.
+
+### Caveats
+
+nodecached may strive to be compatible with memcached, but it is not equivalent.
+To start with, it will probably consume more memory and be slower -- in my tests about twice as slow.
 
 ## Memcached Client
 
