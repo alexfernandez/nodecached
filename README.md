@@ -88,6 +88,22 @@ Delete an object from the server by key.
 * key: a string with the memcached key.
 * callback: function(error, result) to call, true if deleted, false otherwise.
 
+#### client.incr(key, value, callback)
+
+Increment a numeric value from the server by key.
+* key: a string with the memcached key.
+* value: the value to add to the original.
+* callback: function(error, result) to call with the incremented value,
+or false if not found.
+
+#### client.decr(key, value, callback)
+
+Decrement a numeric value from the server by key.
+* key: a string with the memcached key.
+* value: the value to substract from the original.
+* callback: function(error, result) to call with the decremented value,
+or false if not found.
+
 ### Options
 
 The client accepts some options compatible with node-memcached.
