@@ -31,7 +31,10 @@ if(args._.length > 0)
 for (var shortOption in optionMap)
 {
 	var longOption = optionMap[shortOption];
-	args[longOption] = args[shortOption];
+	if (args[shortOption])
+	{
+		args[longOption] = args[shortOption];
+	}
 }
 server.start(args);
 
