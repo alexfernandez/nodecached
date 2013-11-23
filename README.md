@@ -45,8 +45,8 @@ Options are designed to be compatible with the original memcached, whenever poss
 
 These options are specific for nodecached.
 
-* `--error`: Return an error on all queries. Useful for measuring socket performance, without parsing commands.
 * `--delay`: Enable Nagle's algorithm. Useful for measuring the cost of not setting the option `nodelay`.
+* `--fast`: Do not parse commands and return an error on all queries. Useful for measuring socket performance.
 
 ### Caveats
 
