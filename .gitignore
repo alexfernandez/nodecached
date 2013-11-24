@@ -17,3 +17,5 @@ node_modules
 
 local*.sh
 
+docs/*.png
+
