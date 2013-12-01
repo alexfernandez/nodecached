@@ -48,10 +48,84 @@ These options are specific for nodecached.
 * `--delay`: Enable Nagle's algorithm. Useful for measuring the cost of not setting the option `nodelay`.
 * `--fast`: Do not parse commands and return an error on all queries. Useful for measuring socket performance.
 
+### Server Commands
+
+nodecached accepts the following commands, based on [the original commands](https://github.com/memcached/memcached/blob/master/doc/protocol.txt):
+
+#### Storage
+
+There are a few storage commands that start with a header like this:
+
+`<command> <key> <flags> <exptime> <bytes>\r\n`
+
+* <command> is `set`, `add`, `replace`, `append` or `prepend`.
+
+* <key> is a string that will identify the element.
+
+* <flags> is a 32-bit integer to store with the value.
+
+* <exptime> is expiration time in seconds.
+
+* <bytes> is the length of the data in bytes.
+
+Afterwards the server will expect the data block:
+
+`<data>\r\n`
+
+with a length of <bytes>.
+
+The server will respond with:
+
+* `STORED\r\n` to indicate success.
+
+* `NOT_STORED\r\n` to indicate failure.
+
+#### Retrieval
+
+The command `get` has the following syntax:
+
+`get <key>\r\n`
+
+where <key> is a string that identifies an element.
+
+#### Deletion
+
+The command to delete a record is:
+
+`delete <key>\r\n`
+
+where the <key> identifies the record.
+The server will respond with:
+
+* `DELETED` to indicate that the record has been deleted.
+
+* `NOT_DELETED` if the value is not found.
+
+#### Statistics
+
+The following command will retrieve a set of stats.
+
+`stats\r\n`
+
+The stats include `pid`, `total_items` and a few others.
+
+#### Version
+
+This simple command retrieves the version of nodecached.
+
+`version\r\n`
+
+The response will be something like this:
+
+`VERSION <string>`
+
+The version <string> will always start with `nodecached-`.
+
 ### Caveats
 
 nodecached may strive to be compatible with memcached, but it is not equivalent.
 To start with, it will probably consume more memory and be slower -- in my tests about twice as slow.
+Please use with care.
 
 ## Memcached Client
 
