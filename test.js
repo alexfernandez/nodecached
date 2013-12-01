@@ -20,7 +20,10 @@ exports.test = function(callback)
 {
 	log.debug('Running tests');
 	var tests = {};
-	var modules = ['server', 'memory', 'commands', 'parser', 'client', 'token', 'loadtest'];
+	var modules = [
+		'server', 'memory', 'commands', 'parser', 'client', 'token',
+		'loadtest', 'node-memcached'
+	];
 	modules.forEach(function(name)
 	{
 		var filename = './lib/' + name + '.js';
