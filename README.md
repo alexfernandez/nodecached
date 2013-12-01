@@ -124,7 +124,14 @@ The version <string> will always start with `nodecached-`.
 ### Caveats
 
 nodecached may strive to be compatible with memcached, but it is not equivalent.
-To start with, it will probably consume more memory and be slower -- in my tests about twice as slow.
+To start with, it will probably consume more memory and be slower -- in my tests about three times as slow.
+
+On the other hand, the absolute difference amounts to about 20 µs per request --
+that is 20 millionths of a second.
+Typical network latencies are about 10 times bigger than that.
+So the difference might not be an issue to you.
+
+In any case, this is a preliminary version which is not even protocol-complete yet.
 Please use with care.
 
 ## Memcached Client
