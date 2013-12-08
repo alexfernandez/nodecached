@@ -58,21 +58,21 @@ There are a few storage commands that start with a header like this:
 
 `<command> <key> <flags> <exptime> <bytes>\r\n`
 
-* <command> is `set`, `add`, `replace`, `append` or `prepend`.
+* `<command>` is `set`, `add`, `replace`, `append` or `prepend`.
 
-* <key> is a string that will identify the element.
+* `<key>` is a string that will identify the element.
 
-* <flags> is a 32-bit integer to store with the value.
+* `<flags>` is a 32-bit integer to store with the value.
 
-* <exptime> is expiration time in seconds.
+* `<exptime>` is expiration time in seconds.
 
-* <bytes> is the length of the data in bytes.
+* `<bytes>` is the length of the data in bytes.
 
 Afterwards the server will expect the data block:
 
 `<data>\r\n`
 
-with a length of <bytes>.
+with a length of `<bytes>`.
 
 The server will respond with:
 
@@ -86,7 +86,7 @@ The command `get` has the following syntax:
 
 `get <key>\r\n`
 
-where <key> is a string that identifies an element.
+where `<key>` is a string that identifies an element.
 
 #### Deletion
 
@@ -94,7 +94,7 @@ The command to delete a record is:
 
 `delete <key>\r\n`
 
-where the <key> identifies the record.
+where the `<key>` identifies the record.
 The server will respond with:
 
 * `DELETED` to indicate that the record has been deleted.
@@ -119,7 +119,7 @@ The response will be something like this:
 
 `VERSION <string>`
 
-The version <string> will always start with `nodecached-`.
+The version `<string>` will always start with `nodecached-`.
 
 ### Caveats
 
