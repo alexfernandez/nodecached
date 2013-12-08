@@ -134,6 +134,11 @@ So the difference might not be an issue to you.
 In any case, this is a preliminary version which is not even protocol-complete yet.
 Please use with care.
 
+Missing commands are: `gets`, `cas`, `slabs [command]`, `stats [option]`.
+General purpose statistics are by no means complete.
+The option `noreply` is not supported yet.
+UDP and binary protocols are out of scope at the moment.
+
 ## Memcached Client
 
 nodecached can be used as a client to a remote system.
@@ -208,6 +213,14 @@ The client accepts some options compatible with node-memcached.
 
 nodecached can also work as an in-memory cache, again compatible with
 [node-memcached](https://github.com/3rd-Eden/node-memcached).
+
+## References
+
+* [protocol.txt](https://github.com/memcached/memcached/blob/master/doc/protocol.txt)
+* [node-memcached](https://github.com/3rd-Eden/node-memcached)
+* [jscached](https://github.com/monsur/jscache)
+* [memcached configuration](https://code.google.com/p/memcached/wiki/NewConfiguringServer)
+
 
 ## License
 
