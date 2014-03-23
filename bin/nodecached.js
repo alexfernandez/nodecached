@@ -46,10 +46,11 @@ function help()
 	console.log('Usage: nodecached [options]');
 	console.log('  starts a nodecached server.');
 	console.log('Options:');
-	console.log('    --p [port]      Port to run the server, default 11211');
-	console.log('    --v             Show notice messages');
-	console.log('    --vv            Show info messages');
-	console.log('    --vvv           Show debug messages');
+	console.log('    -p [port]      Port to run the server, default 11211');
+	console.log('    -v             Show notice messages');
+	console.log('    -vv            Show info messages');
+	console.log('    -vvv           Show debug messages');
+	console.log('    --fast         Return an error every time (for testing)');
 	process.exit(1);
 }
 
