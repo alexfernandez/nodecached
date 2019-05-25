@@ -3,7 +3,9 @@
 	"version": "0.1.1",
 	"description": "Memcached server written in node.js. Also contains a client compatible with node-memcached, and can be used as an in-memory cache too.",
 	"homepage": "https://github.com/alexfernandez/nodecached",
-	"contributors": ["Alex Fernández <alexfernandeznpm@gmail.com>"],
+	"contributors": [
+		"Alex Fernández <alexfernandeznpm@gmail.com>"
+	],
 	"license": "MIT",
 	"main": "index.js",
 	"repository": {
@@ -18,7 +20,16 @@
 		"memcached": "*",
 		"log": "*"
 	},
-	"keywords" : ["memcached", "npm", "server", "memcache", "cache", "caching", "in-memory", "database"],
+	"keywords": [
+		"memcached",
+		"npm",
+		"server",
+		"memcache",
+		"cache",
+		"caching",
+		"in-memory",
+		"database"
+	],
 	"engines": {
 		"node": "*"
 	},
