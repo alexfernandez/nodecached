@@ -18,4 +18,5 @@ node_modules
 local*.sh
 
 docs/*.png
+package-lock.json
 
