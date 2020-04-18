@@ -13,12 +13,12 @@
 		"url": "https://github.com/alexfernandez/nodecached"
 	},
 	"dependencies": {
-		"prototypes": "*",
 		"async": "*",
-		"testing": "*",
-		"optimist": "~0.6.0",
+		"log": "1.4.0",
 		"memcached": "*",
-		"log": "1.4.0"
+		"optimist": "~0.6.0",
+		"prototypes": "^3.0.2",
+		"testing": "*"
 	},
 	"keywords": [
 		"memcached",
