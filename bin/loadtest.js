@@ -6,12 +6,10 @@
  * (C) 2013 Alex Fernández.
  */
 
-// requires
-var args = require('optimist').argv;
-var loadtest = require('../lib/loadtest.js');
+const args = require('optimist').argv;
+const loadtest = require('../lib/loadtest.js');
 
-// constants
-var optionMap = {
+const optionMap = {
 	c: 'concurrency',
 	n: 'maxRequests',
 	t: 'maxSeconds',
@@ -20,7 +18,6 @@ var optionMap = {
 	noreply: 'noResponse',
 };
 
-// init
 if(args.help || args.h)
 {
 	help();
@@ -32,7 +29,7 @@ if(args._.length > 2)
 }
 while(args._.length > 0)
 {
-	var arg = args._.shift();
+	const arg = args._.shift();
 	if (parseInt(arg, 10))
 	{
 		args.port = parseInt(arg, 10);
@@ -42,9 +39,9 @@ while(args._.length > 0)
 		args.host = parseInt(arg, 10);
 	}
 }
-for (var shortOption in optionMap)
+for (const shortOption in optionMap)
 {
-	var longOption = optionMap[shortOption];
+	const longOption = optionMap[shortOption];
 	args[longOption] = args[shortOption];
 }
 loadtest.run(args);

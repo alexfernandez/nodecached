@@ -7,11 +7,11 @@
  */
 
 // requires
-var args = require('optimist').argv;
-var server = require('../lib/server');
+const args = require('optimist').argv;
+const server = require('../lib/server');
 
 // constants
-var optionMap = {
+const optionMap = {
 	p: 'port',
 	v: 'notice',
 	vv: 'info',
@@ -28,9 +28,9 @@ if(args._.length > 0)
 	console.log('Too many arguments: %s', args._[0]);
 	help();
 }
-for (var shortOption in optionMap)
+for (const shortOption in optionMap)
 {
-	var longOption = optionMap[shortOption];
+	const longOption = optionMap[shortOption];
 	if (args[shortOption])
 	{
 		args[longOption] = args[shortOption];
