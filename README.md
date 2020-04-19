@@ -22,6 +22,13 @@ On Ubuntu or Mac OS X systems, use `sudo`:
 
     $ sudo npm install -g nodecached
 
+### Compatibility
+
+Versions 1 and later should be used at least with Node.js v8 or later:
+
+* Node.js v8 or later: ^1.0.0
+* Node.js v6 or earlier: ^0.2.0.
+
 ## nodecached Server
 
 nodecached is primarily a server compatible with memcached.
