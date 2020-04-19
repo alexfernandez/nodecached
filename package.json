@@ -40,5 +40,8 @@
 	"scripts": {
 		"test": "node test.js"
 	},
-	"private": false
+	"private": false,
+	"devDependencies": {
+		"eslint": "^6.8.0"
+	}
 }
