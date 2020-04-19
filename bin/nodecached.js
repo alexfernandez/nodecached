@@ -8,7 +8,7 @@
 
 // requires
 const args = require('optimist').argv;
-const server = require('../lib/server');
+const {start} = require('../lib/server');
 
 // constants
 const optionMap = {
@@ -36,7 +36,7 @@ for (const shortOption in optionMap)
 		args[longOption] = args[shortOption];
 	}
 }
-server.start(args);
+start(args);
 
 /**
  * Show online help.

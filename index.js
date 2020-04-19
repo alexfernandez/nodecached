@@ -7,13 +7,10 @@
 
 
 // requires
-var server = require('./lib/server.js');
-var client = require('./lib/client.js');
-var memory = require('./lib/memory.js');
+const {start} = require('./lib/server.js');
+const {Client} = require('./lib/client.js');
+const {Cache} = require('./lib/memory.js');
 
 // exports
-exports.start = server.start;
-exports.Client = client.Client;
-exports.Cache = memory.Cache;
-
+module.exports = {start, Client, Cache}
 
