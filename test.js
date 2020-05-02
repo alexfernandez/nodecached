@@ -21,7 +21,7 @@ exports.test = function(callback)
 	log.debug('Running tests');
 	var tests = {};
 	var modules = [
-		'server', 'memory', 'commands', 'parser', 'client', 'token',
+		'server', 'commands', 'parser', 'client', 'token',
 		'loadtest', 'node-memcached'
 	];
 	modules.forEach(function(name)
@@ -29,6 +29,7 @@ exports.test = function(callback)
 		var filename = './lib/' + name + '.js';
 		tests[name] = require(filename).test;
 	});
+	test['memory'] = require('./test/memory.js').test
 	testing.run(tests, 10000, callback);
 };
 
